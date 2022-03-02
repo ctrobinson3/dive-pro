@@ -1,0 +1,42 @@
+
+
+****Dive Check****
+list.forEach(function (value, key, map) {
+        if (diveCheck.includes(value)) {
+            const index = diveCheck.indexOf(value)
+            const dive = diveArray[index]
+            console.log(dive)
+        }
+        else {
+            console.log(key)
+        }
+    })
+
+
+
+    ****Dive Check 2*****
+    function infoGet(d) {
+        if (diveCheck.includes(d)) {
+            const index = diveCheck.indexOf(d)
+            const value = diveArray[index]
+            return value.direction + ' ' + value.rotation + ' ' + value.position + ' DD:' + value.difficulty
+        }
+        else {
+            return (
+                <div>
+                    <label className='formLabelAlert'>"{d}" is not a valid dive number!</label>
+                </div>
+            )
+        }
+    }
+
+
+
+    ***errors
+    const numAmt = Array.from(new Set(numList))  
+        if (numAmt.length === numList.length) {
+            console.log('no repeated dives')
+        }
+        else {
+            console.log('dives are repeated')
+        }
