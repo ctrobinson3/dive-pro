@@ -2,7 +2,6 @@ import { useState } from 'react'
 import DiveCardSix from './DiveCardSix';
 import DiverInfo from './DiverInfo';
 import EnterSixDives from './EnterSixDives';
-import ErrorPage from './ErrorPage';
 
 const CreateSixDive = () => {
 
@@ -46,13 +45,6 @@ const CreateSixDive = () => {
         opt4: new Dive(),
         opt5: new Dive(),
     })
-    //Errors
-    const [errorList, setErrorList] = useState({
-        hasSixDives: false,
-        noRepeatDives: false,
-        hasFourCategories: false
-    })
-
 
     //On Change Events
     const handleInfoChange = (event) => {
@@ -72,13 +64,6 @@ const CreateSixDive = () => {
     const handleListChange = (event) => {
         setFormDataList({
             ...formDataList,
-            [event.target.id]: event.target.value
-        })
-    }
-
-    const handleErrorChange = (event) => {
-        setErrorList({
-            ...errorList,
             [event.target.id]: event.target.value
         })
     }
@@ -108,20 +93,17 @@ const CreateSixDive = () => {
                     next={next}
                     back={back}
                     handleDiveChange={handleDiveChange}
+                    handleListChange={handleListChange}
                     data={formDataDive}
-                />
-            )
-        case 3:
-            return (
-                <ErrorPage
-                    next={next}
-                    back={back}
+                    dataList={formDataList}
                 />
             )
         default:
             return (
                 <DiveCardSix
                     back={back}
+                    infoData={formDataInfo}
+                    diveData={formDataList}
                 />
             )
     }

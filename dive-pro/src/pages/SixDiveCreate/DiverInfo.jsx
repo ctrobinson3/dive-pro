@@ -63,7 +63,9 @@ const DiverInfo = (props) => {
                     />
                 </div>
             </form>
-            <button type="button" className="primaryButton createListingButton" onClick={next}>Next</button>
+            <button type="button" className="primaryButton createListingButton" onClick={next}>Enter Info</button>
+
+
         </div>
     )
 }

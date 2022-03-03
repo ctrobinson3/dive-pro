@@ -9,11 +9,9 @@ import Profile from './pages/Profile'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import ForgotPassword from './pages/ForgotPassword'
-import CreateSixDive from './pages/createDiveCard/CreateSixDive'
-import CreateElevenDive from './pages/createDiveCard/CreateElevenDive'
 import SelectEvent from './pages/SelectEvent'
-import DiveCard from './pages/createDiveCard/DiveCard'
 import SixDiveCreate from './pages/SixDiveCreate/SixDiveCreate'
+import ElevenDiveCreate from './pages/ElevenDiveCreate/ElevenDiveCreate'
 
 function App() {
   return (
@@ -32,8 +30,7 @@ function App() {
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/create-six-dive' element={<SixDiveCreate />} />
-          <Route path='/create-eleven-dive' element={<CreateElevenDive />} />
-          <Route path='/dive-card' element={<DiveCard />} />
+          <Route path='/create-eleven-dive' element={<ElevenDiveCreate />} />
         </Routes>
         <Navbar />
       </Router>
