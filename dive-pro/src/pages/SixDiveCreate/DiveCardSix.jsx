@@ -1,4 +1,30 @@
+import { useState } from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import './SixDiveCard.css'
+
 const DiveCardSix = (props) => {
+    //Download PDF
+    const [docName, setDocName] = useState('')
+
+    const onChange = (e) => {
+        const newValue = e.target.value
+        setDocName(newValue)
+    }
+
+    function printDocument() {
+        const input = document.getElementById('divToPrint');
+        html2canvas(input)
+            .then((canvas) => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+                pdf.addImage(imgData, 'JPEG', 0, 0);
+                pdf.save(docName);
+            })
+            ;
+    }
+
+    //Dive Info
     const { back, infoData, diveData } = props
     const d1 = diveData.vol1
     const d2 = diveData.opt1
@@ -14,7 +40,7 @@ const DiveCardSix = (props) => {
             return <div> {d.direction} {d.rotation} {d.position} DD: {d.difficulty}</div>
     }
 
-    return (
+    return (<>
         <div className="profile">
             <h1>Six Dives</h1>
             <div>
@@ -44,9 +70,51 @@ const DiveCardSix = (props) => {
                     Second Dive: {printInfo(d6)}
                 </div>
             </div>
-            <button type="button" className="primaryButton createListingButton">Download Dive Card</button>
+            <div>
+                <h1>Name Download:</h1>
+                <input className="formInput" onChange={onChange}></input>
+            </div>
+            <button type="button" className="primaryButton createListingButton" onClick={printDocument}>Download Dive Card</button>
             <button type="button" className="primaryButton createListingButton" onClick={back}>Back</button>
         </div>
+
+        <div id="divToPrint" className="mt4" {...({})}>
+            <div className="table-div">
+                <table className="infoTable-top">
+                    <thead>
+                        <tr className="top-row">
+                            <th className="top-row-1">Diver</th>
+                            <th className="top-row-2">Meet</th>
+                            <th className="top-row-3">Date</th>
+                            <th className="top-row-4">Dive Order</th>
+                        </tr>
+                        <tr>
+                            <th>{infoData.diverName}</th>
+                            <th>{infoData.meet}</th>
+                            <th>{infoData.date}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+                <table className="infoTable-bottom">
+                    <thead>
+                        <tr>
+                            <th className="bottom-row-1">Team</th>
+                            <th className="bottom-row-2">Event</th>
+                            <th className="bottom-row-3">Coach</th>
+                            <th className="bottom-row-4">List Check</th>
+                        </tr>
+                        <tr>
+                            <th>{infoData.team}</th>
+                            <th>One Meter</th>
+                            <th>{infoData.coach}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </>
     )
 }
 
