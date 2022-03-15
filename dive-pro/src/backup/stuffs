@@ -40,3 +40,38 @@ list.forEach(function (value, key, map) {
         else {
             console.log('dives are repeated')
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const p1 = dataList.vol1
+    const p2 = dataList.opt1
+    const p3 = dataList.opt2
+    const p4 = dataList.opt3
+    const p5 = dataList.opt4
+    const p6 = dataList.opt5
+    const pos = [p1, p2, p3, p4, p5, p6]
+    const divePos = pos.map(d => {
+        if (d.position === 'Straight')
+            return ('a')
+        else if (d.position === 'Pike')
+            return ('b')
+        else if (d.position === 'Tuck')
+            return ('c')
+        else if (d.position === 'Free')
+            return ('d')
+        else
+            return ('')
+    })

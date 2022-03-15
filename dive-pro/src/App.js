@@ -12,7 +12,6 @@ import ForgotPassword from './pages/ForgotPassword'
 import SelectEvent from './pages/SelectEvent'
 import SixDiveCreate from './pages/SixDiveCreate/SixDiveCreate'
 import ElevenDiveCreate from './pages/ElevenDiveCreate/ElevenDiveCreate'
-import Component from './pages/TestPdf'
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
           <Route path='/forgotpassword' element={<ForgotPassword />} />
           <Route path='/create-six-dive' element={<SixDiveCreate />} />
           <Route path='/create-eleven-dive' element={<ElevenDiveCreate />} />
-          <Route path='/testpdf' element={<Component />} />
         </Routes>
         <Navbar />
       </Router>

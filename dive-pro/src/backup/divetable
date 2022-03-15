@@ -1,0 +1,36 @@
+<div className="table-div">
+                <div className="table-top-div">
+                    <table className="infoTable-top">
+                        <thead>
+                            <tr className="top-row">
+                                <th className="top-row-1">Diver</th>
+                                <th className="top-row-2">Meet</th>
+                                <th className="top-row-3">Date</th>
+                                <th className="top-row-4">Dive Order</th>
+                            </tr>
+                            <tr>
+                                <th>{infoData.diverName}</th>
+                                <th>{infoData.meet}</th>
+                                <th>{infoData.date}</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <table className="infoTable-bottom">
+                    <thead>
+                        <tr>
+                            <th className="bottom-row-1">Team</th>
+                            <th className="bottom-row-2">Event</th>
+                            <th className="bottom-row-3">Coach</th>
+                            <th className="bottom-row-4">List Check</th>
+                        </tr>
+                        <tr>
+                            <th>{infoData.team}</th>
+                            <th>One Meter</th>
+                            <th>{infoData.coach}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
