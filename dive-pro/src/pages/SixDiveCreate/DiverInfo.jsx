@@ -2,16 +2,16 @@ const DiverInfo = (props) => {
     const { data, onChange, next } = props
     return (
         <div className='profile'>
-            <header>
+            <header className='head'>
                 <h3>(6-Dives)</h3>
                 <h1>Enter Diver and Meet Info</h1>
             </header>
             <form>
                 {/* Diver Name */}
-                <div>
+                <div className='input-div'>
                     <label htmlFor="name" className='formLabel'>Diver's Name</label>
                     <input
-                        className='formInputName'
+                        className='form-input'
                         id='diverName'
                         type='text'
                         value={data.diverName}
@@ -19,10 +19,10 @@ const DiverInfo = (props) => {
                     />
                 </div>
                 {/* Team */}
-                <div>
+                <div className='input-div'>
                     <label className='formLabel'>Team</label>
                     <input
-                        className='formInputName'
+                        className='form-input'
                         type='text'
                         id='team'
                         value={data.team}
@@ -30,10 +30,10 @@ const DiverInfo = (props) => {
                     />
                 </div>
                 {/* Coach */}
-                <div>
+                <div className='input-div'>
                     <label className='formLabel'>Coach's Name</label>
                     <input
-                        className='formInputName'
+                        className='form-input'
                         type='text'
                         id='coach'
                         value={data.coach}
@@ -41,10 +41,10 @@ const DiverInfo = (props) => {
                     />
                 </div>
                 {/* Meet */}
-                <div>
+                <div className='input-div'>
                     <label className='formLabel'>Meet Name</label>
                     <input
-                        className='formInputName'
+                        className='form-input'
                         type='text'
                         id='meet'
                         value={data.meet}
@@ -52,10 +52,10 @@ const DiverInfo = (props) => {
                     />
                 </div>
                 {/* Date */}
-                <div>
+                <div className='input-div'>
                     <label className='formLabel'>Date</label>
                     <input
-                        className='formInputName'
+                        className='form-input'
                         type='text'
                         id='date'
                         value={data.date}

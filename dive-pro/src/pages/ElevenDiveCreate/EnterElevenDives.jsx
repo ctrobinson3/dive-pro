@@ -28,7 +28,7 @@ export default function EnterElevenDives(props) {
         <>
             <div className='profile'>
                 {/* Header */}
-                <header>
+                <header className='head'>
                     <h3>(11-Dive)</h3>
                     <h1>Enter Eleven Dives</h1>
                 </header>

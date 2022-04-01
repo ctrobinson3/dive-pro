@@ -66,3 +66,29 @@ body.active-modal {
 .valid-text{
     color: rgb(16, 167, 16);
 }
+
+.form-input{
+    padding: 0.9rem 2.8rem;
+    background-color: #ffffff;
+    font-weight: 600;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.9rem 1rem;
+    width: 90%;
+    max-width: 346px;
+}
+
+.input-div,
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

@@ -9,107 +9,115 @@ export default function SecondRound(props) {
 
     return (<>
         <div className='form-div'>
-            <header className='form-header'><h2>Second Round</h2></header>
+            <header className='head'><h2>Second Round</h2></header>
 
             <form>
                 {/* sixth dive */}
                 <div className='diveDiv'>
                     <div className='inputForm'>
                         <label className='formLabel'>Sixth Dive</label>
-                        <input
-                            className='formInputName'
-                            type='text'
-                            id='d6'
-                            value={d6}
-                            onChange={onChange}
-                        />
-
+                        <div className="dive-entry">
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='d6'
+                                value={d6}
+                                onChange={onChange}
+                            />
+                            <button
+                                type='button'
+                                className={d6opt === 'o' ? 'formButtonActive' : 'formButton'}
+                                id='d6opt'
+                                value='o'
+                                onClick={onChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={d6opt === 'v' ? 'formButtonActive' : 'formButton'}
+                                id='d6opt'
+                                value='v'
+                                onClick={onChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
                     </div>
-                    <div className='formButtons'>
-                        <button
-                            type='button'
-                            className={d6opt === 'o' ? 'formButtonActive' : 'formButton'}
-                            id='d6opt'
-                            value='o'
-                            onClick={onChange}
-                        >
-                            Opt
-                        </button>
-                        <button
-                            type='button'
-                            className={d6opt === 'v' ? 'formButtonActive' : 'formButton'}
-                            id='d6opt'
-                            value='v'
-                            onClick={onChange}
-                        >
-                            Vol
-                        </button>
+                    <div className='form-dive-name'>
+                        <label className='form-text'>(Dive name goes here)</label>
                     </div>
                 </div>
                 {/* seventh dive */}
                 <div className='diveDiv'>
                     <div className='inputForm'>
                         <label className='formLabel'>Seventh Dive</label>
-                        <input
-                            className='formInputName'
-                            type='text'
-                            id='d7'
-                            value={d7}
-                            onChange={onChange}
-                        />
+                        <div className="dive-entry">
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='d7'
+                                value={d7}
+                                onChange={onChange}
+                            />
+                            <button
+                                type='button'
+                                className={d7opt === 'o' ? 'formButtonActive' : 'formButton'}
+                                id='d7opt'
+                                value='o'
+                                onClick={onChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={d7opt === 'v' ? 'formButtonActive' : 'formButton'}
+                                id='d7opt'
+                                value='v'
+                                onClick={onChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
                     </div>
-                    <div className='formButtons'>
-                        <button
-                            type='button'
-                            className={d7opt === 'o' ? 'formButtonActive' : 'formButton'}
-                            id='d7opt'
-                            value='o'
-                            onClick={onChange}
-                        >
-                            Opt
-                        </button>
-                        <button
-                            type='button'
-                            className={d7opt === 'v' ? 'formButtonActive' : 'formButton'}
-                            id='d7opt'
-                            value='v'
-                            onClick={onChange}
-                        >
-                            Vol
-                        </button>
+                    <div className='form-dive-name'>
+                        <label className='form-text'>(Dive name goes here)</label>
                     </div>
                 </div>
                 {/* eighth dive */}
                 <div className='diveDiv'>
                     <div className='inputForm'>
                         <label className='formLabel'>Eighth Dive</label>
-                        <input
-                            className='formInputName'
-                            type='text'
-                            id='d8'
-                            value={d8}
-                            onChange={onChange}
-                        />
+                        <div className="dive-entry">
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='d8'
+                                value={d8}
+                                onChange={onChange}
+                            />
+                            <button
+                                type='button'
+                                className={d8opt === 'o' ? 'formButtonActive' : 'formButton'}
+                                id='d8opt'
+                                value='o'
+                                onClick={onChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={d8opt === 'v' ? 'formButtonActive' : 'formButton'}
+                                id='d8opt'
+                                value='v'
+                                onClick={onChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
                     </div>
-                    <div className='formButtons'>
-                        <button
-                            type='button'
-                            className={d8opt === 'o' ? 'formButtonActive' : 'formButton'}
-                            id='d8opt'
-                            value='o'
-                            onClick={onChange}
-                        >
-                            Opt
-                        </button>
-                        <button
-                            type='button'
-                            className={d8opt === 'v' ? 'formButtonActive' : 'formButton'}
-                            id='d8opt'
-                            value='v'
-                            onClick={onChange}
-                        >
-                            Vol
-                        </button>
+                    <div className='form-dive-name'>
+                        <label className='form-text'>(Dive name goes here)</label>
                     </div>
                 </div>
             </form>

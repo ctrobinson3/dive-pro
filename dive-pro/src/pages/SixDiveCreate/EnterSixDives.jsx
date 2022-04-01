@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Modal.css"
+import "./SixDive.css"
 import { diveArrayFunction } from '../../components/DiveArray'
 import DiveCheck from "../../components/DiveCheck"
 
@@ -146,13 +146,13 @@ const EnterSixDives = (props) => {
         <>
 
             <div className='profile'>
-                <header>
+                <header className='head'>
                     <h3>(6-Dives)</h3>
                     <h1>Enter Six Dives</h1>
                 </header>
                 <form>
                     {/* First Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>First Dive</label>
                         <p>(Voluntary Dive)</p>
                         <input
@@ -164,7 +164,7 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                     {/* Second Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>Second Dive</label>
                         <input
                             className='formInputName'
@@ -175,7 +175,7 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                     {/* Third Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>Third Dive</label>
                         <input
                             className='formInputName'
@@ -186,7 +186,7 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                     {/* Fourth Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>Fourth Dive</label>
                         <input
                             className='formInputName'
@@ -197,7 +197,7 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                     {/* Fifth Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>Fifth Dive</label>
                         <input
                             className='formInputName'
@@ -208,7 +208,7 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                     {/* Sixth Dive */}
-                    <div>
+                    <div className='input-div'>
                         <label className='formLabel'>Sixth Dive</label>
                         <input
                             className='formInputName'
