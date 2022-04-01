@@ -55,6 +55,11 @@ export default function RoundIndex() {
         })
     }
 
+    //run list check
+    const listCheck = () => {
+        console.log('listcheckclicked')
+    }
+
     //set pages
     const [formPage, setFormPage] = useState(1)
     const formNext = () => {
@@ -72,6 +77,7 @@ export default function RoundIndex() {
                     next={formNext}
                     firstRound={firstRound}
                     onChange={handleFirst}
+                    listCheck={listCheck}
                 />
             )
         case 2:
@@ -81,6 +87,7 @@ export default function RoundIndex() {
                     back={formBack}
                     secondRound={secondRound}
                     onChange={handleSecond}
+                    listCheck={listCheck}
                 />
             )
         default:
@@ -89,7 +96,9 @@ export default function RoundIndex() {
                     back={formBack}
                     thirdRound={thirdRound}
                     onChange={handleThird}
+                    listCheck={listCheck}
                 />
             )
     }
+
 }

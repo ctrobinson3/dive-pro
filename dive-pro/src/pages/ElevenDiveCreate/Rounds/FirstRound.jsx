@@ -2,25 +2,11 @@ import Right from '@mui/icons-material/ArrowCircleRight';
 import { useState } from 'react';
 
 export default function FirstRound(props) {
-    const { next, firstRound, onChange } = props
+    const { next, firstRound, onChange, listCheck } = props
 
     //deconstruct
     const { d1, d1opt, d2, d2opt, d3, d3opt, d4, d4opt, d5, d5opt } = firstRound
 
-    const [testDives, setTest] = useState({
-        test1: '',
-        test2: '',
-        test3: '',
-        test4: '',
-        test5: ''
-    })
-
-    const onMutate = (e) => {
-        setTest({
-            ...testDives,
-            [e.target.id]: e.target.value
-        })
-    }
 
     return (<>
         <div className='form-div'>
@@ -219,6 +205,12 @@ export default function FirstRound(props) {
                 type="button"
                 onClick={next}>
                 <Right sx={{ fontSize: 50 }} />
+            </button>
+            <button
+                className='check-button'
+                type='button'
+                onClick={listCheck}
+            >Check
             </button>
         </div>
     </>

@@ -77,6 +77,21 @@ body.active-modal {
     padding: 40px 7px;
 }
 
+.check-button{
+    cursor: pointer;
+    color: white;
+    background-color:#0050ac ;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;    
+    padding: 10px 7px;    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2ch;
+    font-weight: 500;
+    border-radius: .8rem;
+    margin: 1rem;
+}
+
 .form-buttons{
     display: flex;
 }
