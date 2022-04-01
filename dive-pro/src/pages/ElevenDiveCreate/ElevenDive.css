@@ -1,0 +1,124 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    cursor: pointer;
+    background: #189AB4;
+    border-radius: 1rem;
+    padding: 10px 7px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;    
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 10px;
+    max-width: 800px;
+    min-width: 400px;
+}
+
+.close-modal {    
+    cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: #0050ac;
+    border-radius: .8em;
+}
+
+.invalid-text{
+    color: red;
+}
+
+.valid-text{
+    color: rgb(16, 167, 16);
+}
+
+.form-button{    
+    cursor: pointer;
+    color: #0050ac;
+    background-color: transparent;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;    
+    padding: 40px 7px;
+}
+
+.form-buttons{
+    display: flex;
+}
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    background-image: linear-gradient(to bottom right, rgb(44, 168, 206), rgb(101, 175, 197));
+    border-radius: .8em;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+.diveDiv,
+.form-header{
+    margin: 1rem;
+}
+
+.dive-entry{
+    display: flex;
+}
+
+.form-text{
+    margin: 1rem;
+    padding-top: 5px;
+    font-size: 1.5ch;
+}
+
+.diveDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    padding-top: .001rem;
+    border-radius: .8em;
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+    background-color: #a8a8a894;
+}
+
+.formLabel{
+    display: flex;
+    justify-content: center;
+    font-size: 2ch;
+
+}

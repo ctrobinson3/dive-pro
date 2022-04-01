@@ -1,11 +1,18 @@
-const DiverInfo = (props) => {
-    const { data, onChange, next } = props
+export default function DiverInfo11(props) {
+    const { dataInfo, onChange, next } = props
     return (
         <div className='profile'>
+            {/* 
+            Header
+             */}
             <header>
-                <h3>(6-Dives)</h3>
+                <h3>(11-Dives)</h3>
                 <h1>Enter Diver and Meet Info</h1>
             </header>
+
+            {/* 
+            Form
+            */}
             <form>
                 {/* Diver Name */}
                 <div>
@@ -14,7 +21,7 @@ const DiverInfo = (props) => {
                         className='formInputName'
                         id='diverName'
                         type='text'
-                        value={data.diverName}
+                        value={dataInfo.diverName}
                         onChange={onChange}
                     />
                 </div>
@@ -25,7 +32,7 @@ const DiverInfo = (props) => {
                         className='formInputName'
                         type='text'
                         id='team'
-                        value={data.team}
+                        value={dataInfo.team}
                         onChange={onChange}
                     />
                 </div>
@@ -36,7 +43,7 @@ const DiverInfo = (props) => {
                         className='formInputName'
                         type='text'
                         id='coach'
-                        value={data.coach}
+                        value={dataInfo.coach}
                         onChange={onChange}
                     />
                 </div>
@@ -47,7 +54,7 @@ const DiverInfo = (props) => {
                         className='formInputName'
                         type='text'
                         id='meet'
-                        value={data.meet}
+                        value={dataInfo.meet}
                         onChange={onChange}
                     />
                 </div>
@@ -58,21 +65,22 @@ const DiverInfo = (props) => {
                         className='formInputName'
                         type='text'
                         id='date'
-                        value={data.date}
+                        value={dataInfo.date}
                         onChange={onChange}
                     />
                 </div>
+
             </form>
+
+            {/* 
+            Buttons
+             */}
             <button
                 type="button"
                 className="primaryButton createListingButton"
                 onClick={next}>
                 Enter Info
             </button>
-
-
         </div>
     )
 }
-
-export default DiverInfo

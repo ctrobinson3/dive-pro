@@ -1,0 +1,259 @@
+import { useState } from 'react'
+import './Modal11.css'
+import { diveArrayFunction } from '../../components/DiveArray'
+import DiveCheck from '../../components/DiveCheck'
+
+export default function EnterElevenDives(props) {
+    //props
+    const { next, back, handleEntryChange, handleDiveChange, dataEntry, dataDive } = props
+
+    //modal
+    const [modal, setModal] = useState(false)
+    const toggleModal = () => {
+        setModal(!modal)
+    }
+    if (modal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
+    //dive check/array
+    const diveCheck = DiveCheck
+    const diveArray = diveArrayFunction()
+
+    //destructured dataEntry
+    const { dive1, dive1opt, dive2, dive2opt, dive3, dive3opt, dive4, dive4opt, dive5, dive5opt,
+        dive6, dive6opt, dive7, dive7opt, dive8, dive8opt,
+        dive9, dive9opt, dive10, dive10opt, dive11, dive11opt } = dataEntry
+
+    //check list
+    const checkList = () => {
+        toggleModal()
+    }
+
+
+    return (
+        <>
+            <div className='profile'>
+                {/* 
+                    Header
+            */}
+                <header>
+                    <h3>(11-Dive)</h3>
+                    <h1>Enter Eleven Dives</h1>
+                </header>
+
+                {/* 
+                    Form
+            */}
+                <form>
+                    <h2>First Round</h2>
+                    {/* first dive */}
+                    <div className='diveDiv'>
+                        <div className='inputForm'>
+                            <label className='formLabel'>First Dive</label>
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='dive1'
+                                value={dataEntry.dive1}
+                                onChange={handleEntryChange}
+                            />
+                        </div>
+                        <div className='formButtons'>
+                            <button
+                                type='button'
+                                className={dive1opt === 'opt' ? 'formButtonActive' : 'formButton'}
+                                id='dive1opt'
+                                value='opt'
+                                onClick={handleEntryChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={dive1opt === 'vol' ? 'formButtonActive' : 'formButton'}
+                                id='dive1opt'
+                                value='vol'
+                                onClick={handleEntryChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
+                    </div>
+                    {/* second dive */}
+                    <div className='diveDiv'>
+                        <div className='inputForm'>
+                            <label className='formLabel'>Second Dive</label>
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='dive2'
+                                value={dive2}
+                                onChange={handleEntryChange}
+                            />
+                        </div>
+                        <div className='formButtons'>
+                            <button
+                                type='button'
+                                className={dive2opt === 'opt' ? 'formButtonActive' : 'formButton'}
+                                id='dive2opt'
+                                value='opt'
+                                onClick={handleEntryChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={dive2opt === 'vol' ? 'formButtonActive' : 'formButton'}
+                                id='dive2opt'
+                                value='vol'
+                                onClick={handleEntryChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
+                    </div>
+                    {/* third dive */}
+                    <div className='diveDiv'>
+                        <div className='inputForm'>
+                            <label className='formLabel'>Third Dive</label>
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='dive3'
+                                value={dive3}
+                                onChange={handleEntryChange}
+                            />
+                        </div>
+                        <div className='formButtons'>
+                            <button
+                                type='button'
+                                className={dive3opt === 'opt' ? 'formButtonActive' : 'formButton'}
+                                id='dive3opt'
+                                value='opt'
+                                onClick={handleEntryChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={dive3opt === 'vol' ? 'formButtonActive' : 'formButton'}
+                                id='dive3opt'
+                                value='vol'
+                                onClick={handleEntryChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
+                    </div>
+                    {/* fourth dive */}
+                    <div className='diveDiv'>
+                        <div className='inputForm'>
+                            <label className='formLabel'>Fourth Dive</label>
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='dive4'
+                                value={dive4}
+                                onChange={handleEntryChange}
+                            />
+                        </div>
+                        <div className='formButtons'>
+                            <button
+                                type='button'
+                                className={dive4opt === 'opt' ? 'formButtonActive' : 'formButton'}
+                                id='dive4opt'
+                                value='opt'
+                                onClick={handleEntryChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={dive4opt === 'vol' ? 'formButtonActive' : 'formButton'}
+                                id='dive4opt'
+                                value='vol'
+                                onClick={handleEntryChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
+                    </div>
+                    {/* fifth dive */}
+                    <div className='diveDiv'>
+                        <div className='inputForm'>
+                            <label className='formLabel'>Fifth Dive</label>
+                            <input
+                                className='formInputName'
+                                type='text'
+                                id='dive5'
+                                value={dive5}
+                                onChange={handleEntryChange}
+                            />
+                        </div>
+                        <div className='formButtons'>
+                            <button
+                                type='button'
+                                className={dive5opt === 'opt' ? 'formButtonActive' : 'formButton'}
+                                id='dive5opt'
+                                value='opt'
+                                onClick={handleEntryChange}
+                            >
+                                Opt
+                            </button>
+                            <button
+                                type='button'
+                                className={dive5opt === 'vol' ? 'formButtonActive' : 'formButton'}
+                                id='dive5opt'
+                                value='vol'
+                                onClick={handleEntryChange}
+                            >
+                                Vol
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                {/* 
+                    Buttons
+            */}
+                <button
+                    type="button"
+                    className="primaryButton createListingButton"
+                    onClick={checkList}>
+                    Submit
+                </button>
+                <button
+                    type="button"
+                    className="primaryButton createListingButton"
+                    onClick={back}>
+                    Back
+                </button>
+            </div>
+
+            {/* Modal */}
+            {modal && (
+                <div className='modal'>
+                    <div className='overlay'></div>
+                    <div className='modal-content'>
+                        <h3>Round 1</h3>
+                        <p>First Dive: {dive1}</p>
+                        <p>{dive1opt}</p>
+                        <p>Second Dive: {dive2}</p>
+                        <p>{dive2opt}</p>
+                        <p>Third Dive: {dive3}</p>
+                        <p>{dive3opt}</p>
+                        <p>Fourth Dive: {dive4}</p>
+                        <p>{dive4opt}</p>
+                        <p>Fifth Dive: {dive5}</p>
+                        <p>{dive5opt}</p>
+                        <button type="button" className="close-modal" onClick={toggleModal}>Close</button>
+                    </div>
+                </div>
+            )}
+        </>
+    )
+}

@@ -1,9 +1,10 @@
-import React, { isValidElement, useState } from "react"
+import React, { useState } from "react"
 import "./Modal.css"
 import { diveArrayFunction } from '../../components/DiveArray'
+import DiveCheck from "../../components/DiveCheck"
 
 const EnterSixDives = (props) => {
-    const { next, back, handleDiveChange, handleListChange, data, dataList } = props
+    const { next, back, handleDiveChange, data, dataList } = props
     //Dive Modal
     const [modal, setModal] = useState(false)
     const toggleModal = () => {
@@ -16,18 +17,7 @@ const EnterSixDives = (props) => {
     }
 
     //Dive Check Array
-    const diveCheck = [
-        '101a', '101b', '101c', '102a', '102b', '102c', '103a', '103b', '103c', '104a', '104b', '104c', '105b', '105c', '106b', '106c', '107b', '107c',
-        '112b', '112c', '113b', '113c',
-        '201a', '201b', '201c', '202a', '202b', '202c', '203a', '203b', '203c', '204b', '204c', '205b', '205c',
-        '301a', '301b', '301c', '302a', '302b', '302c', '303a', '303b', '303c', '304a', '304b', '304c', '305b', '305c',
-        '401a', '401b', '401c', '402a', '402b', '402c', '403b', '403c', '404b', '404c', '405b', '405c',
-        '412b', '412c', '413b', '413c',
-        '5111a', '5111b', '5111c', '5112a', '5112b', '5121d', '5122d', '5124d', '5126d', '5131d', '5132d', '5134d', '5136d', '5142b', '5142c', '5152b', '5152c',
-        '5211a', '5212a', '5221d', '5222d', '5223d', '5225d', '5227d', '5231d', '5233d', '5235d', '5251b', '5251c',
-        '5311a', '5312a', '5321d', '5322d', '5323d', '5325d', '5331d', '5333d', '5335d', '5351b', '5351c',
-        '5411a', '5411b', '5412a', '5412b', '5421d', '5422d', '5432d', '5434d'
-    ]
+    const diveCheck = DiveCheck
     const diveArray = diveArrayFunction()
 
     //Entered Dives
@@ -87,7 +77,7 @@ const EnterSixDives = (props) => {
             return a
         }, {})
     const duplicate = Object.keys(numAmt).filter((a) => numAmt[a] > 1)
-    if (duplicate.length == 0) {
+    if (duplicate.length === 0) {
         noRepeat = true
     } else { noRepeat = false }
 
@@ -229,8 +219,18 @@ const EnterSixDives = (props) => {
                         />
                     </div>
                 </form>
-                <button type="button" className="primaryButton createListingButton" onClick={checkList}>Check List</button>
-                <button type="button" className="primaryButton createListingButton" onClick={back}>Back</button>
+                <button
+                    type="button"
+                    className="primaryButton createListingButton"
+                    onClick={checkList}>
+                    Check List
+                </button>
+                <button
+                    type="button"
+                    className="primaryButton createListingButton"
+                    onClick={back}>
+                    Back
+                </button>
             </div>
 
             {/* Modal */}
@@ -242,8 +242,18 @@ const EnterSixDives = (props) => {
                             <h2>BITCH CHECKS OUT</h2>
                             <p>SUBMIT THA SHIT</p>
                             {/* Enter List Info Here */}
-                            <button type="button" className="close-modal" onClick={toggleModal}>Close</button>
-                            <button type="button" className="primaryButton createListingButton" onClick={next}>Submit</button>
+                            <button
+                                type="button"
+                                className="close-modal"
+                                onClick={toggleModal}>
+                                Close
+                            </button>
+                            <button
+                                type="button"
+                                className="primaryButton createListingButton"
+                                onClick={next}>
+                                Submit
+                            </button>
                         </div>
                     )}
                     {!validList && (
@@ -253,8 +263,18 @@ const EnterSixDives = (props) => {
                             <div>{fourCatE()}</div>
                             <div>{noRepE()}</div>
                             {/* Enter List Info Here */}
-                            <button type="button" className="primaryButton createListingButton" onClick={toggleModal}>Back</button>
-                            <button type="button" className="btn-modal" onClick={next}>Submit Anyway</button>
+                            <button
+                                type="button"
+                                className="primaryButton createListingButton"
+                                onClick={toggleModal}>
+                                Back
+                            </button>
+                            <button
+                                type="button"
+                                className="btn-modal"
+                                onClick={next}>
+                                Submit Anyway
+                            </button>
                         </div>
                     )}
                 </div>

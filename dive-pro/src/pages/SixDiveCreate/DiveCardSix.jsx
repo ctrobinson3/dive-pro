@@ -169,8 +169,18 @@ const DiveCardSix = (props) => {
                 <h1>Name PDF:</h1>
                 <input className="formInput" onChange={onChange}></input>
             </div>
-            <button type="button" className="primaryButton createListingButton" onClick={printDocument}>Download Dive Card</button>
-            <button type="button" className="primaryButton createListingButton" onClick={back}>Back</button>
+            <button
+                type="button"
+                className="primaryButton createListingButton"
+                onClick={printDocument}>
+                Download Dive Card
+            </button>
+            <button
+                type="button"
+                className="primaryButton createListingButton"
+                onClick={back}>
+                Back
+            </button>
         </div>
     </>
     )
