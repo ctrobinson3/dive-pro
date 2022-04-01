@@ -7,7 +7,20 @@ export default function FirstRound(props) {
     //deconstruct
     const { d1, d1opt, d2, d2opt, d3, d3opt, d4, d4opt, d5, d5opt } = firstRound
 
+    const [testDives, setTest] = useState({
+        test1: '',
+        test2: '',
+        test3: '',
+        test4: '',
+        test5: ''
+    })
 
+    const onMutate = (e) => {
+        setTest({
+            ...testDives,
+            [e.target.id]: e.target.value
+        })
+    }
 
     return (<>
         <div className='form-div'>
