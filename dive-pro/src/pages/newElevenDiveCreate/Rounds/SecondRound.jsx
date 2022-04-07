@@ -1,11 +1,9 @@
 import Left from "@mui/icons-material/ArrowCircleLeft"
 import Right from "@mui/icons-material/ArrowCircleRight"
 
-export default function SecondRound(props) {
-    const { next, back, secondRound, onChange, listCheck } = props
-
+export default function SecondRound({ next, back, onChange, dives }) {
     //decon
-    const { d6, d6opt, d7, d7opt, d8, d8opt } = secondRound
+    const { d6, d6opt, d7, d7opt, d8, d8opt } = dives
 
 
     return (<>
@@ -22,11 +20,12 @@ export default function SecondRound(props) {
                         <label className='formLabel'>Sixth Dive</label>
                         <div className="dive-entry">
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d6'
                                 value={d6}
                                 onChange={onChange}
+                                placeholder='(#)'
                             />
                             <button
                                 type='button'
@@ -58,11 +57,12 @@ export default function SecondRound(props) {
                         <label className='formLabel'>Seventh Dive</label>
                         <div className="dive-entry">
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d7'
                                 value={d7}
                                 onChange={onChange}
+                                placeholder='(#)'
                             />
                             <button
                                 type='button'
@@ -94,11 +94,12 @@ export default function SecondRound(props) {
                         <label className='formLabel'>Eighth Dive</label>
                         <div className="dive-entry">
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d8'
                                 value={d8}
                                 onChange={onChange}
+                                placeholder='(#)'
                             />
                             <button
                                 type='button'
@@ -140,12 +141,7 @@ export default function SecondRound(props) {
                 </button>
 
             </div>
-            <button
-                className='check-button'
-                type='button'
-                onClick={listCheck}
-            >Check
-            </button>
+
         </div>
     </>
     )

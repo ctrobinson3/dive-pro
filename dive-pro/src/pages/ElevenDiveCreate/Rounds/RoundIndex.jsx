@@ -2,6 +2,8 @@ import FirstRound from "./FirstRound"
 import SecondRound from "./SecondRound"
 import ThirdRound from "./ThirdRound"
 import { useState } from "react"
+import { diveArrayFunction } from '../../../components/DiveArray'
+import DiveCheck from "../../../components/DiveCheck"
 
 export default function RoundIndex() {
 
@@ -54,6 +56,30 @@ export default function RoundIndex() {
             [e.target.id]: e.target.value
         })
     }
+
+    //set dives
+    const diveCheck = DiveCheck
+    const diveArray = diveArrayFunction()
+    const allEnteredDives = [
+        firstRound.d1, firstRound.d2, firstRound.d3, firstRound.d4, firstRound.d5,
+        secondRound.d6, secondRound.d7, secondRound.d8,
+        thirdRound.d9, thirdRound.d10, thirdRound.d11
+    ]
+
+    const diveList = allEnteredDives.map(d => {
+        const isValid = diveCheck.includes(d) ? true : false
+        if (isValid === true) {
+            const index = diveCheck.indexOf(d)
+            const value = diveArray[index]
+            return value
+        } else {
+            const value = 'invalid dive'
+            return value
+        }
+    })
+
+
+
 
     //run list check
     const listCheck = () => {

@@ -141,6 +141,9 @@ export function diveArrayFunction() {
     const t5432d = new Dive('Inward', '1.5 SS, 1 Twist', 'Free', '2.7', 5, 5432);
     const t5434d = new Dive('Inward', '1.5 SS, 2 Twist', 'Free', '3.1', 5, 5434);
 
+    //Empty Dive
+    const empty = new Dive(' ', ' ', ' ', ' ', 0, 0)
+
     //array	
     return [
         f101a, f101b, f101c, f102a, f102b, f102c, f103a, f103b, f103c, f104a, f104b, f104c, f105b, f105c, f106b, f106c, f107b, f107c,
@@ -152,6 +155,7 @@ export function diveArrayFunction() {
         t5111a, t5111b, t5111c, t5112a, t5112b, t5121d, t5122d, t5124d, t5126d, t5131d, t5132d, t5134d, t5136d, t5142b, t5142c, t5152b, t5152c,
         t5211a, t5212a, t5221d, t5222d, t5223d, t5225d, t5227d, t5231d, t5233d, t5235d, t5251b, t5251c,
         t5311a, t5312a, t5321d, t5322d, t5323d, t5325d, t5331d, t5333d, t5335d, t5351b, t5351c,
-        t5411a, t5411b, t5412a, t5412b, t5421d, t5422d, t5432d, t5434d]
+        t5411a, t5411b, t5412a, t5412b, t5421d, t5422d, t5432d, t5434d,
+        empty]
 }
 

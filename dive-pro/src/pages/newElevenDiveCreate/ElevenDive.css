@@ -1,5 +1,3 @@
-
-
 body.active-modal {
     overflow-y: hidden;
 }
@@ -169,4 +167,12 @@ body.active-modal {
 .form-dive-name{
     display: flex;
     justify-content: center;
+}
+
+input{
+    text-align: center;
+}
+
+.dive-entry{
+    /* text-transform: lowercase; */
 }

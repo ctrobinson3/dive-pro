@@ -1,9 +1,9 @@
 import Left from "@mui/icons-material/ArrowCircleLeft"
 
-export default function ThirdRound(props) {
-    const { back, thirdRound, onChange, listCheck } = props
+export default function ThirdRound({ back, toggleModal, onChange, dives }) {
 
-    const { d9, d9opt, d10, d10opt, d11, d11opt } = thirdRound
+
+    const { d9, d9opt, d10, d10opt, d11, d11opt } = dives
 
     return (<><div className='form-div'>
         <header className='head'>
@@ -17,11 +17,12 @@ export default function ThirdRound(props) {
                     <label className='formLabel'>Ninth Dive</label>
                     <div className="dive-entry">
                         <input
-                            className='formInputName'
+                            className='formInputName dive-entry'
                             type='text'
                             id='d9'
                             value={d9}
                             onChange={onChange}
+                            placeholder='(#)'
                         />
                         <button
                             type='button'
@@ -53,11 +54,12 @@ export default function ThirdRound(props) {
                     <label className='formLabel'>Tenth Dive</label>
                     <div className="dive-entry">
                         <input
-                            className='formInputName'
+                            className='formInputName dive-entry'
                             type='text'
                             id='d10'
                             value={d10}
                             onChange={onChange}
+                            placeholder='(#)'
                         />
                         <button
                             type='button'
@@ -89,11 +91,12 @@ export default function ThirdRound(props) {
                     <label className='formLabel'>Eleventh Dive</label>
                     <div className="dive-entry">
                         <input
-                            className='formInputName'
+                            className='formInputName dive-entry'
                             type='text'
                             id='d11'
                             value={d11}
                             onChange={onChange}
+                            placeholder='(#)'
                         />
                         <button
                             type='button'
@@ -129,7 +132,7 @@ export default function ThirdRound(props) {
         <button
             className='check-button'
             type='button'
-            onClick={listCheck}
+            onClick={toggleModal}
         >Check
         </button>
     </div>

@@ -11,7 +11,8 @@ import SignUp from './pages/SignUp'
 import ForgotPassword from './pages/ForgotPassword'
 import SelectEvent from './pages/SelectEvent'
 import SixDiveCreate from './pages/SixDiveCreate/SixDiveCreate'
-import ElevenDiveCreate from './pages/ElevenDiveCreate/ElevenDiveCreate'
+// import ElevenDiveCreate from './pages/ElevenDiveCreate/ElevenDiveCreate'
+import ElevenDiveCreate from './pages/newElevenDiveCreate/ElevenDiveCreate'
 
 function App() {
   return (

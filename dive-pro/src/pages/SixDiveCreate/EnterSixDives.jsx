@@ -128,7 +128,6 @@ const EnterSixDives = (props) => {
     }
 
 
-
     //Get Info
     const getInfo = (d) => {
         const dive = diveList[d]

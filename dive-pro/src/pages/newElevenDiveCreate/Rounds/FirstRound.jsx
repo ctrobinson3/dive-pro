@@ -1,9 +1,11 @@
 import Right from '@mui/icons-material/ArrowCircleRight';
 
-export default function FirstRound(props) {
-    const { next, firstRound, onChange, listCheck } = props
-    //deconstruct
-    const { d1, d1opt, d2, d2opt, d3, d3opt, d4, d4opt, d5, d5opt } = firstRound
+export default function FirstRound({ next, dives, onChange }) {
+    const { d1, d1opt, d2, d2opt, d3, d3opt, d4, d4opt, d5, d5opt } = dives
+
+
+
+
 
     return (<>
         <div className='form-div'>
@@ -18,7 +20,7 @@ export default function FirstRound(props) {
                         <label className='formLabel '>First Dive</label>
                         <div className='dive-entry'>
                             <input
-                                className='formInputName '
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d1'
                                 value={d1}
@@ -56,7 +58,7 @@ export default function FirstRound(props) {
                         <label className='formLabel'>Second Dive</label>
                         <div className='dive-entry'>
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d2'
                                 value={d2}
@@ -94,7 +96,7 @@ export default function FirstRound(props) {
                         <label className='formLabel'>Third Dive</label>
                         <div className='dive-entry'>
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d3'
                                 value={d3}
@@ -131,7 +133,7 @@ export default function FirstRound(props) {
                         <label className='formLabel'>Fourth Dive</label>
                         <div className='dive-entry'>
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d4'
                                 value={d4}
@@ -168,7 +170,7 @@ export default function FirstRound(props) {
                         <label className='formLabel'>Fifth Dive</label>
                         <div className='dive-entry'>
                             <input
-                                className='formInputName'
+                                className='formInputName dive-entry'
                                 type='text'
                                 id='d5'
                                 value={d5}
@@ -205,12 +207,6 @@ export default function FirstRound(props) {
                 type="button"
                 onClick={next}>
                 <Right sx={{ fontSize: 50 }} />
-            </button>
-            <button
-                className='check-button'
-                type='button'
-                onClick={listCheck}
-            >Check
             </button>
         </div>
     </>
